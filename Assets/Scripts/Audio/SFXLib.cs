@@ -22,4 +22,19 @@ public class SFXLib : MonoBehaviour
         }
         return null;
     }
+
+    public AudioClip GetClipSpecific(string groupName, int index)
+    {
+        foreach (SFX sfx in sfxs)
+        {
+            if (sfx.groupID == groupName)
+            {
+                if (index >= 0 && index < sfx.clips.Length)
+                {
+                    return sfx.clips[index];
+                }
+            }
+        }
+        return null;
+    }
 }
