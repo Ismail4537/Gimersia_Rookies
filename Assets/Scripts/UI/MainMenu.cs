@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
@@ -21,10 +22,15 @@ public class MainMenu : MonoBehaviour
 
     //}
 
-    public void LoadScene(int sceneID)
+    void Update()
     {
-        SceneManager.LoadScene(sceneID);
-        Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
+        // Cek apakah tombol SPACE ditekan
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            // Pindah ke scene GameScene
+            SceneManager.LoadScene("GameScene");
+            Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
+        }
     }
 
     //IEnumerator LoadSceneAsync(int sceneID)
