@@ -6,14 +6,25 @@ public class CollideChecker : MonoBehaviour
     protected Player player;
     void Awake()
     {
+        doWhenAwake();
+    }
+
+    protected virtual void doWhenAwake()
+    {
         player = GetComponentInParent<Player>();
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Terrain"))
         {
             collide = true;
-            enterCondition();
+            enterTerrainCond();
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            enterObsCond();
         }
     }
 
@@ -25,7 +36,11 @@ public class CollideChecker : MonoBehaviour
         }
     }
 
-    protected virtual void enterCondition()
+    protected virtual void enterTerrainCond()
+    {
+
+    }
+    protected virtual void enterObsCond()
     {
 
     }

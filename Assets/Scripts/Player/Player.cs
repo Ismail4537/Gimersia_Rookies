@@ -1,27 +1,32 @@
 using System;
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEditor.UIElements;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public PlayerInputController pic;
-    public Rigidbody2D rb2D;
+    PlayerInputController pic;
+    Rigidbody2D rb2D;
     ConstantForce2D cf;
     [SerializeField] CollideChecker chara, board;
     [SerializeField] CinemachineCamera CCCam;
     [SerializeField] GroundDetector gd;
     Vector2 startPos;
-    float distanceTravelled = 0f;
     public bool isGrounded = false;
-    public bool wasGrounded = false;
+    public bool isFell = false;
+    float distanceTravelled = 0f;
+    bool wasGrounded = false;
+    bool canControlled = true;
     float turnFactor = 10f;
     float jumpForce = 10f;
     bool terrainContact = false;
     float boosterMeterMax = 100f;
-    public float boosterMeterCur = 0f;
-    public float maxVelocity = 200f;
+    float boosterMeterCur = 0f;
+    float maxVelocity = 80f;
     float smoothVel;
+    float boostDuration = 5f;
+    float boostTimer;
     // Awake is called when the script instance is being loaded
     void Awake()
     {
@@ -45,21 +50,24 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        camMovement();
         Movement();
-        maxVelocityReset();
         checkGround();
         terrainContactChecker();
     }
 
     void DisCount()
     {
+        if (isFell)
+        {
+            return;
+        }
         distanceTravelled = Vector2.Distance(startPos, transform.position);
         HUDManager.instance.UpdateDistanceCounter(distanceTravelled);
     }
 
     public void Movement()
     {
-        CCCam.Lens.OrthographicSize = Mathf.SmoothDamp(10, rb2D.linearVelocity.magnitude, ref smoothVel, 0.25f);
         if ((isGrounded || terrainContact) && !wasGrounded)
         {
             rb2D.linearVelocity = Vector2.ClampMagnitude(rb2D.linearVelocity, maxVelocity);
@@ -80,6 +88,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            rb2D.linearVelocity = Vector2.ClampMagnitude(rb2D.linearVelocity, maxVelocity);
             cf.relativeForce = new Vector2(0f, 0f);
             rb2D.gravityScale = 1f;
         }
@@ -90,6 +99,35 @@ public class Player : MonoBehaviour
         }
         rb2D.angularVelocity -= pic.dir.x * turnFactor;
         rb2D.angularVelocity = Mathf.Clamp(rb2D.angularVelocity, -250f, 250f);
+    }
+
+    public void changeCamTarget(Transform newTarget)
+    {
+        CCCam.Follow = newTarget;
+    }
+
+    public Vector2 getVelocity()
+    {
+        return rb2D.linearVelocity;
+    }
+
+    public bool getControllable()
+    {
+        return canControlled;
+    }
+
+    public bool setControllable(bool state)
+    {
+        canControlled = state;
+        return canControlled;
+    }
+
+    void camMovement()
+    {
+        if (canControlled)
+        {
+            CCCam.Lens.OrthographicSize = Mathf.SmoothDamp(20, rb2D.linearVelocity.magnitude, ref smoothVel, 0.2f);
+        }
     }
 
     // Test raycast
@@ -112,7 +150,9 @@ public class Player : MonoBehaviour
         {
             cf.relativeForce = new Vector2(0f, 0f);
             wasGrounded = true;
-            rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            float playerRotation = transform.eulerAngles.z;
+            Vector2 jumpDir = new Vector2(-Mathf.Sin(playerRotation * Mathf.Deg2Rad), Mathf.Cos(playerRotation * Mathf.Deg2Rad));
+            rb2D.AddForce(jumpDir * jumpForce, ForceMode2D.Impulse);
         }
     }
 
@@ -132,7 +172,6 @@ public class Player : MonoBehaviour
     public void updateBooster(float amount)
     {
         boosterMeterCur = Mathf.Clamp(amount, 0f, boosterMeterMax);
-        Debug.Log("Booster Meter: " + boosterMeterCur);
         HUDManager.instance.UpdateBoosterMeter(boosterMeterCur);
     }
 
@@ -140,29 +179,24 @@ public class Player : MonoBehaviour
     {
         if (boosterMeterCur == 100f && isGrounded)
         {
-            maxVelocity = 250f;
-            if (rb2D.linearVelocity.x < 0)
-            {
-                rb2D.linearVelocity *= -2f;
-            }
-            else
-            {
-                rb2D.linearVelocity *= 2f;
-            }
+            StartCoroutine(boostCountdown());
             updateBooster(0);
         }
     }
 
-    void maxVelocityReset()
+    IEnumerator boostCountdown()
     {
-        if (maxVelocity > 200f)
+        boostTimer = boostDuration;
+        while (boostTimer > 0)
         {
-            maxVelocity -= Time.fixedDeltaTime * 10f;
+            boostTimer -= Time.deltaTime;
+            if (isGrounded)
+            {
+                rb2D.AddForce(new Vector2(0.5f, 0f), ForceMode2D.Impulse);
+            }
+            yield return null;
         }
-        if (maxVelocity < 200f)
-        {
-            maxVelocity = 200f;
-        }
+        StopCoroutine(boostCountdown());
     }
 
     void terrainContactChecker()

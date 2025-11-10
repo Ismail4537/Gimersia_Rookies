@@ -14,6 +14,10 @@ public class PlayerInputController : MonoBehaviour
 
     public void MoveInput(InputAction.CallbackContext context)
     {
+        if (!player.getControllable())
+        {
+            return;
+        }
         if (context.started)
         {
             // Debug.Log("Move started");
@@ -32,6 +36,10 @@ public class PlayerInputController : MonoBehaviour
 
     public void JumpInput(InputAction.CallbackContext context)
     {
+        if (!player.getControllable())
+        {
+            return;
+        }
         if (context.started)
         {
             // Debug.Log("Jump started");
@@ -52,6 +60,10 @@ public class PlayerInputController : MonoBehaviour
 
     public void BoostInput(InputAction.CallbackContext context)
     {
+        if (!player.getControllable())
+        {
+            return;
+        }
         if (context.started)
         {
             // Debug.Log("Boost started");
