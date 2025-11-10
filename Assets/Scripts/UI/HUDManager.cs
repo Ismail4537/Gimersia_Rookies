@@ -31,12 +31,6 @@ public class HUDManager : MonoBehaviour
         boosterMeter.value = amount;
     }
 
-    public void UpdateCurrCoinAmmount(int amount)
-    {
-        GameManager.instance.currCoinAmmount += amount;
-        UpdateCoinCounter(GameManager.instance.currCoinAmmount);
-    }
-
     public void UpdateCoinCounter(int amount)
     {
         coinCounter.text = amount.ToString();

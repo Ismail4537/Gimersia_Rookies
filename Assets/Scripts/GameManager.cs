@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int currCoinAmmount = 0;
+    int currCoinAmmount = 0;
     public float distance = 0;
     void Awake()
     {
@@ -23,6 +23,12 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void UpdateCurrCoinAmmount(int amount)
+    {
+        currCoinAmmount += amount;
+        HUDManager.instance.UpdateCoinCounter(currCoinAmmount);
+    }
+
     public void triggerGameOver()
     {
         HUDManager.instance.ShowGameOverScreen(currCoinAmmount, distance);
@@ -37,5 +43,7 @@ public class GameManager : MonoBehaviour
     {
         currCoinAmmount = 0;
         distance = 0;
+        HUDManager.instance.UpdateCoinCounter(currCoinAmmount);
+        HUDManager.instance.UpdateDistanceCounter(distance);
     }
 }

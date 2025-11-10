@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     {
         startPos = transform.position;
         MusicManager.instance.PlayMusicTrack("test", 1f);
+        HUDManager.instance.UpdateBoosterMeter(boosterMeterCur);
     }
 
     // Update is called once per frame
@@ -152,7 +153,7 @@ public class Player : MonoBehaviour
             wasGrounded = true;
             float playerRotation = transform.eulerAngles.z;
             Vector2 jumpDir = new Vector2(-Mathf.Sin(playerRotation * Mathf.Deg2Rad), Mathf.Cos(playerRotation * Mathf.Deg2Rad));
-            rb2D.AddForce(jumpDir * jumpForce, ForceMode2D.Impulse);
+            rb2D.AddForce(jumpDir * (jumpForce + (rb2D.linearVelocity.magnitude * 0.25f)), ForceMode2D.Impulse);
         }
     }
 

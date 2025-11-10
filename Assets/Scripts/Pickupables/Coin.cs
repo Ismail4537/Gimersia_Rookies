@@ -4,6 +4,6 @@ public class Coin : PickUpAbles
 {
     protected override void action(Player player)
     {
-        HUDManager.instance.UpdateCurrCoinAmmount(1);
+        GameManager.instance.UpdateCurrCoinAmmount(1);
     }
 }

@@ -21,6 +21,7 @@ public class SceneController : MonoBehaviour
     void Start()
     {
         maxScene = SceneManager.sceneCountInBuildSettings - 1;
+        Debug.Log("Max Scene Index: " + maxScene);
     }
 
     public void RestartScene()
@@ -33,6 +34,7 @@ public class SceneController : MonoBehaviour
     public void ToMainMenu()
     {
         SceneManager.LoadScene(0);
+        GameManager.instance.resetGameData();
         Destroy(HUDManager.instance.gameObject);
     }
 
@@ -47,8 +49,9 @@ public class SceneController : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
+        Debug.Log("Next Scene Index: " + nextSceneIndex);
 
-        if (nextSceneIndex < maxScene && nextSceneIndex < 0)
+        if (nextSceneIndex <= maxScene && nextSceneIndex >= 0)
         {
             ToGameScene(nextSceneIndex);
         }
