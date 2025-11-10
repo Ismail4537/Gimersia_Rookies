@@ -1,52 +1,39 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
-using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject container;
+    //public GameObject creditContainer;
 
-    //public GameObject loadingScreen;
-
-    //public int sceneID = 3;
-
-
-    //private void Start()
-    //{
-    //    StartCoroutine(LoadSceneAsync(sceneID));
-    //}
-
-    //public void LoadScene(int sceneID)
-    //{
-
-    //}
-
-    void Update()
+    public void LoadScene(int sceneID)
     {
-        // Cek apakah tombol SPACE ditekan
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            // Pindah ke scene GameScene
-            SceneManager.LoadScene("GameScene");
-            Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
-        }
+        SceneManager.LoadScene(sceneID);
+        Time.timeScale = 1;
     }
 
-    //IEnumerator LoadSceneAsync(int sceneID)
-    //{
-    //    AsyncOperation operation = SceneManager.LoadSceneAsync(sceneID);
-    //    loadingScreen.SetActive(true);
-    //    while (!operation.isDone)
-    //    {
-    //        yield return null;
-    //    }
-    //    loadingScreen.SetActive(false);
-    //}
-
-    public void ExitGame()
+    public void settingsBtn()
     {
-        Debug.Log("Exitting game...");
+        container.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void creditBtn()
+    {
+        container.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void closeBtn()
+    {
+        container.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit game...");
         Application.Quit();
     }
 }
