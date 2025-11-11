@@ -28,7 +28,7 @@ public class SFXManager : MonoBehaviour
             AudioSource audioSource = Instantiate(SFXObject, position, Quaternion.identity);
             audioSource.clip = clip;
             audioSource.volume = volume;
-            audioSource.spatialBlend = 1.0f; // 3D sound
+            audioSource.spatialBlend = 1.0f;
             audioSource.Play();
             float clipLength = clip.length;
             Destroy(audioSource.gameObject, clipLength);
