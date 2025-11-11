@@ -13,7 +13,7 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI finalCoinText;
     [SerializeField] TextMeshProUGUI finalDistanceText;
     [SerializeField] TextMeshProUGUI titleText;
-    [SerializeField] Button nextStageButton;
+    // [SerializeField] Button nextStageButton;
     void Awake()
     {
         if (instance == null)
@@ -53,21 +53,21 @@ public class GameUIManager : MonoBehaviour
         HUD.SetActive(isActive);
     }
 
-    public void ShowGameOverScreen(int finalScore, float finalDistance, string title = "Game Over", bool isWin = false)
+    public void ShowGameOverScreen(int finalScore, float finalDistance, string title = "Score", bool isWin = false)
     {
         finalCoinText.text = finalScore.ToString();
         finalDistanceText.text = finalDistance.ToString("F2") + "m";
         titleText.text = title;
         toggleHUD(false);
 
-        if (isWin)
-        {
-            nextStageButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            nextStageButton.gameObject.SetActive(false);
-        }
+        // if (isWin)
+        // {
+        //     nextStageButton.gameObject.SetActive(true);
+        // }
+        // else
+        // {
+        //     nextStageButton.gameObject.SetActive(false);
+        // }
 
         gameOverScreen.SetActive(true);
     }
@@ -84,9 +84,9 @@ public class GameUIManager : MonoBehaviour
         SceneController.instance.ToMainMenu();
     }
 
-    public void NextStageBtn()
-    {
-        gameOverScreen.SetActive(false);
-        SceneController.instance.ToNextScene();
-    }
+    // public void NextStageBtn()
+    // {
+    //     gameOverScreen.SetActive(false);
+    //     SceneController.instance.ToNextScene();
+    // }
 }
