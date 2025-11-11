@@ -2,36 +2,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
-public class PauseMenuController : MonoBehaviour
+public class NewMonoBehaviourScript : MonoBehaviour
 {
     public GameObject container;
-
-    public static PauseMenuController instance;
-
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     void Update()
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            Paus();
+            container.SetActive(true);
+            Time.timeScale = 0; // Pause the game
         }
-    }
-
-    public void Paus()
-    {
-        container.SetActive(true);
-        Time.timeScale = 0; // Pause the game
     }
 
     public void ResumeBtn()
@@ -40,10 +21,10 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1; // Resume the game
     }
 
-    public void MainMenuBtn()
+    public void MainMenuBtn(int sceneID)
     {
         // Load the main menu scene (assuming it's named "MainMenu")
-        SceneController.instance.ToMainMenu();
+        SceneManager.LoadScene(sceneID);
         Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
     }
 }

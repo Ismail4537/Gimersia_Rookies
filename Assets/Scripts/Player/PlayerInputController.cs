@@ -14,10 +14,6 @@ public class PlayerInputController : MonoBehaviour
 
     public void MoveInput(InputAction.CallbackContext context)
     {
-        if (!player.getControllable())
-        {
-            return;
-        }
         if (context.started)
         {
             // Debug.Log("Move started");
@@ -36,10 +32,6 @@ public class PlayerInputController : MonoBehaviour
 
     public void JumpInput(InputAction.CallbackContext context)
     {
-        if (!player.getControllable())
-        {
-            return;
-        }
         if (context.started)
         {
             // Debug.Log("Jump started");
@@ -55,30 +47,6 @@ public class PlayerInputController : MonoBehaviour
         if (context.canceled)
         {
             // Debug.Log("Jump canceled");
-        }
-    }
-
-    public void BoostInput(InputAction.CallbackContext context)
-    {
-        if (!player.getControllable())
-        {
-            return;
-        }
-        if (context.started)
-        {
-            // Debug.Log("Boost started");
-        }
-        if (context.performed)
-        {
-            if (player != null)
-            {
-                player.useBooster();
-            }
-            // Debug.Log("Boost performed");
-        }
-        if (context.canceled)
-        {
-            // Debug.Log("Boost canceled");
         }
     }
 }

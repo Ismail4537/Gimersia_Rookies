@@ -13,11 +13,11 @@ public class SFXManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 
@@ -28,7 +28,7 @@ public class SFXManager : MonoBehaviour
             AudioSource audioSource = Instantiate(SFXObject, position, Quaternion.identity);
             audioSource.clip = clip;
             audioSource.volume = volume;
-            audioSource.spatialBlend = 1.0f;
+            audioSource.spatialBlend = 1.0f; // 3D sound
             audioSource.Play();
             float clipLength = clip.length;
             Destroy(audioSource.gameObject, clipLength);
