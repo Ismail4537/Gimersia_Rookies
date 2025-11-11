@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     [SerializeField] CollideChecker chara, board;
     [SerializeField] CinemachineCamera CCCam;
     [SerializeField] GroundDetector gd;
-    [SerializeField] AudioSource boardSlidingSFX;
     Vector2 startPos;
     public bool isGrounded = false;
     public bool isFell = false;
@@ -75,14 +74,6 @@ public class Player : MonoBehaviour
     {
         if ((isGrounded || terrainContact) && !wasGrounded)
         {
-            if (rb2D.linearVelocity.magnitude > 5f)
-            {
-                boardSlidingSFX.enabled = true;
-            }
-            else
-            {
-                boardSlidingSFX.enabled = false;
-            }
             rb2D.linearVelocity = Vector2.ClampMagnitude(rb2D.linearVelocity, maxVelocity);
             rb2D.gravityScale = 2f;
 
@@ -101,7 +92,6 @@ public class Player : MonoBehaviour
         }
         else
         {
-            boardSlidingSFX.enabled = false;
             rb2D.linearVelocity = Vector2.ClampMagnitude(rb2D.linearVelocity, maxVelocity);
             cf.relativeForce = new Vector2(0f, 0f);
             rb2D.gravityScale = 1f;
@@ -123,6 +113,11 @@ public class Player : MonoBehaviour
     public Vector2 getVelocity()
     {
         return rb2D.linearVelocity;
+    }
+
+    public float getMaxSpeed()
+    {
+        return maxVelocity;
     }
 
     public bool getControllable()
@@ -179,7 +174,7 @@ public class Player : MonoBehaviour
     {
         if (boosterMeterCur == 100f && isGrounded)
         {
-            SFXManager.instance.PlayClip2D("Boosting", 1.0f);
+            SFXManager.instance.PlayClip2D("Boosting", 0.5f);
             StartCoroutine(boostCountdown());
             updateBooster(0);
         }

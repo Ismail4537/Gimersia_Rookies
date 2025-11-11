@@ -7169,6 +7169,18 @@ PrefabInstance:
       propertyPath: m_LinearDamping
       value: 0.025
       objectReference: {fileID: 0}
+    - target: {fileID: 2320611990432004256, guid: acbc118df0db88749a0c3f1a058d2da8, type: 3}
+      propertyPath: useDoppler
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320611990432004256, guid: acbc118df0db88749a0c3f1a058d2da8, type: 3}
+      propertyPath: lowPitchMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320611990432004256, guid: acbc118df0db88749a0c3f1a058d2da8, type: 3}
+      propertyPath: pitchMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2432024290448977716, guid: acbc118df0db88749a0c3f1a058d2da8, type: 3}
       propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.size
       value: 1
