@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] CollideChecker chara, board;
     [SerializeField] CinemachineCamera CCCam;
     [SerializeField] GroundDetector gd;
+    [SerializeField] AudioSource boardSlidingSFX;
     Vector2 startPos;
     public bool isGrounded = false;
     public bool isFell = false;
@@ -63,14 +64,25 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        distanceTravelled = Vector2.Distance(startPos, transform.position);
-        GameUIManager.instance.UpdateDistanceCounter(distanceTravelled);
+        if (distanceTravelled < Vector2.Distance(startPos, transform.position))
+        {
+            distanceTravelled = Vector2.Distance(startPos, transform.position);
+            GameUIManager.instance.UpdateDistanceCounter(distanceTravelled);
+        }
     }
 
     public void Movement()
     {
         if ((isGrounded || terrainContact) && !wasGrounded)
         {
+            if (rb2D.linearVelocity.magnitude > 5f)
+            {
+                boardSlidingSFX.enabled = true;
+            }
+            else
+            {
+                boardSlidingSFX.enabled = false;
+            }
             rb2D.linearVelocity = Vector2.ClampMagnitude(rb2D.linearVelocity, maxVelocity);
             rb2D.gravityScale = 2f;
 
@@ -89,6 +101,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            boardSlidingSFX.enabled = false;
             rb2D.linearVelocity = Vector2.ClampMagnitude(rb2D.linearVelocity, maxVelocity);
             cf.relativeForce = new Vector2(0f, 0f);
             rb2D.gravityScale = 1f;
@@ -131,20 +144,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Test raycast
-
-    // public float heigh = 2.5f;
-
-    // void OnDrawGizmos()
-    // {
-    //     Vector2 baseDir = -transform.up;
-    //     Quaternion raycastRotation = Quaternion.Euler(0f, 0f, 0f);
-    //     Vector2 raycastDir = raycastRotation * baseDir;
-    //     Debug.DrawRay(new Vector2(transform.position.x, transform.position.y), raycastDir * heigh, Color.green);
-    // }
-
-    // Test raycast end
-
     public void Jump()
     {
         if (isGrounded)
@@ -180,6 +179,7 @@ public class Player : MonoBehaviour
     {
         if (boosterMeterCur == 100f && isGrounded)
         {
+            SFXManager.instance.PlayClip2D("Boosting", 1.0f);
             StartCoroutine(boostCountdown());
             updateBooster(0);
         }

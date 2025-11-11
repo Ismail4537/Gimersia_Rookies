@@ -25,6 +25,11 @@ public class MusicManager : MonoBehaviour
         StartCoroutine(AnimateMusicCrossfade(musicLib.GetTrackByName(name), fadeDuration));
     }
 
+    public void StopMusicTrack(float fadeDuration = 0.5f)
+    {
+        StartCoroutine(AnimateMusicCrossfade(null, fadeDuration));
+    }
+
     IEnumerator AnimateMusicCrossfade(AudioClip newClip, float fadeDuration = 0.5f)
     {
         float percent = 0f;

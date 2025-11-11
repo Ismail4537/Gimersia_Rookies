@@ -19,12 +19,13 @@ public class CharCheck : CollideChecker
     }
     protected override void enterTerrainCond()
     {
-        SFXManager.instance.PlayClip3D("test", transform.position, 1.0f);
+        SFXManager.instance.PlayClip3D("HitSnow", transform.position, 1.0f);
         fellOff();
     }
 
     protected override void enterObsCond()
     {
+        SFXManager.instance.PlayClip3D("HitObstacle", transform.position, 1.0f);
         fellOff();
     }
 
@@ -53,6 +54,12 @@ public class CharCheck : CollideChecker
             fullCollider.SetActive(true);
         }
 
+        // trigger game over with 1 second delay
+        Invoke("invokeGameOver", 1f);
+    }
+
+    void invokeGameOver()
+    {
         GameManager.instance.triggerGameOver();
     }
 }

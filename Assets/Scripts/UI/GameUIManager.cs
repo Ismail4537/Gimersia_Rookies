@@ -5,6 +5,7 @@ using TMPro;
 public class GameUIManager : MonoBehaviour
 {
     public static GameUIManager instance;
+    [SerializeField] GameObject HUD;
     [SerializeField] Slider boosterMeter;
     [SerializeField] TextMeshProUGUI coinCounter;
     [SerializeField] TextMeshProUGUI distanceCounter;
@@ -26,6 +27,11 @@ public class GameUIManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        toggleHUD(true);
+    }
+
     public void UpdateBoosterMeter(float amount)
     {
         boosterMeter.value = amount;
@@ -42,11 +48,17 @@ public class GameUIManager : MonoBehaviour
         distanceCounter.text = distance.ToString("F2") + "m";
     }
 
+    public void toggleHUD(bool isActive)
+    {
+        HUD.SetActive(isActive);
+    }
+
     public void ShowGameOverScreen(int finalScore, float finalDistance, string title = "Game Over", bool isWin = false)
     {
         finalCoinText.text = finalScore.ToString();
         finalDistanceText.text = finalDistance.ToString("F2") + "m";
         titleText.text = title;
+        toggleHUD(false);
 
         if (isWin)
         {

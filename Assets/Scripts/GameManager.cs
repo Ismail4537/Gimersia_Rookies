@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public void triggerGameOver()
     {
         saveCurrStageData();
+        SFXManager.instance.PlayClip2D("GameOver", 1.0f);
         GameUIManager.instance.ShowGameOverScreen(currCoinAmmount, distance);
     }
 
