@@ -17,7 +17,7 @@ public class SFXLib : MonoBehaviour
         {
             if (sfx.groupID == name)
             {
-                return sfx.clips[Random.Range(0, sfx.clips.Length)]; // Return a random clip in the group
+                return sfx.clips[Random.Range(0, sfx.clips.Length)];
             }
         }
         return null;
