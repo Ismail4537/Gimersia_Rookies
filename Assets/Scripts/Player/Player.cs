@@ -143,7 +143,7 @@ public class Player : MonoBehaviour
     {
         if (isGrounded)
         {
-            SFXManager.instance.PlayClip2D("HitSnow", 1f);
+            SFXManager.instance.PlayClip3D("HitSnow", transform.position, 1f);
             cf.relativeForce = new Vector2(0f, 0f);
             wasGrounded = true;
             float playerRotation = transform.eulerAngles.z;
