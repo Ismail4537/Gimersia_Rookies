@@ -2,14 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class HUDManager : MonoBehaviour
+public class GameUIManager : MonoBehaviour
 {
-    public static HUDManager instance;
+    public static GameUIManager instance;
     [SerializeField] Slider boosterMeter;
     [SerializeField] TextMeshProUGUI coinCounter;
     [SerializeField] TextMeshProUGUI distanceCounter;
     [SerializeField] GameObject gameOverScreen;
-    [SerializeField] TextMeshProUGUI finalScoreText;
+    [SerializeField] TextMeshProUGUI finalCoinText;
     [SerializeField] TextMeshProUGUI finalDistanceText;
     [SerializeField] TextMeshProUGUI titleText;
     [SerializeField] Button nextStageButton;
@@ -44,7 +44,7 @@ public class HUDManager : MonoBehaviour
 
     public void ShowGameOverScreen(int finalScore, float finalDistance, string title = "Game Over", bool isWin = false)
     {
-        finalScoreText.text = finalScore.ToString();
+        finalCoinText.text = finalScore.ToString();
         finalDistanceText.text = finalDistance.ToString("F2") + "m";
         titleText.text = title;
 

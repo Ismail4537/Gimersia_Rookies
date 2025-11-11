@@ -3675,7 +3675,7 @@ MonoBehaviour:
   coinCounter: {fileID: 667434069}
   distanceCounter: {fileID: 141955835}
   gameOverScreen: {fileID: 637323529}
-  finalScoreText: {fileID: 791247880}
+  finalCoinText: {fileID: 791247880}
   finalDistanceText: {fileID: 1149204094}
   titleText: {fileID: 1590599442}
   nextStageButton: {fileID: 696447393}

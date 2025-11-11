@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     {
         startPos = transform.position;
         MusicManager.instance.PlayMusicTrack("test", 1f);
-        HUDManager.instance.UpdateBoosterMeter(boosterMeterCur);
+        GameUIManager.instance.UpdateBoosterMeter(boosterMeterCur);
     }
 
     // Update is called once per frame
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
             return;
         }
         distanceTravelled = Vector2.Distance(startPos, transform.position);
-        HUDManager.instance.UpdateDistanceCounter(distanceTravelled);
+        GameUIManager.instance.UpdateDistanceCounter(distanceTravelled);
     }
 
     public void Movement()
@@ -173,7 +173,7 @@ public class Player : MonoBehaviour
     public void updateBooster(float amount)
     {
         boosterMeterCur = Mathf.Clamp(amount, 0f, boosterMeterMax);
-        HUDManager.instance.UpdateBoosterMeter(boosterMeterCur);
+        GameUIManager.instance.UpdateBoosterMeter(boosterMeterCur);
     }
 
     public void useBooster()

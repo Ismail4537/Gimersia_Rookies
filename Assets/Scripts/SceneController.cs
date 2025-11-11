@@ -21,12 +21,12 @@ public class SceneController : MonoBehaviour
     void Start()
     {
         maxScene = SceneManager.sceneCountInBuildSettings - 1;
-        Debug.Log("Max Scene Index: " + maxScene);
     }
 
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.instance.saveCurrStageData();
         GameManager.instance.resetGameData();
         Time.timeScale = 1;
     }
@@ -35,7 +35,7 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         GameManager.instance.resetGameData();
-        Destroy(HUDManager.instance.gameObject);
+        Destroy(GameUIManager.instance.gameObject);
     }
 
     public void ToGameScene(int sceneID)

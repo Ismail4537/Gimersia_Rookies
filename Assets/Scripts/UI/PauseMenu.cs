@@ -40,15 +40,10 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1; // Resume the game
     }
 
-    public void MainMenuBtn(int sceneID)
+    public void MainMenuBtn()
     {
         // Load the main menu scene (assuming it's named "MainMenu")
         SceneController.instance.ToMainMenu();
         Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
-    }
-
-    void resetScore()
-    {
-
     }
 }

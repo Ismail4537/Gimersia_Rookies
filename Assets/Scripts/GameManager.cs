@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,30 +21,47 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
     }
 
     public void UpdateCurrCoinAmmount(int amount)
     {
         currCoinAmmount += amount;
-        HUDManager.instance.UpdateCoinCounter(currCoinAmmount);
+        GameUIManager.instance.UpdateCoinCounter(currCoinAmmount);
     }
 
     public void triggerGameOver()
     {
-        HUDManager.instance.ShowGameOverScreen(currCoinAmmount, distance);
+        saveCurrStageData();
+        GameUIManager.instance.ShowGameOverScreen(currCoinAmmount, distance);
     }
 
     public void triggerWin(string title = "You Win!")
     {
-        HUDManager.instance.ShowGameOverScreen(currCoinAmmount, distance, title, true);
+        saveCurrStageData();
+        PlayerPrefs.SetString("Stage_" + SceneManager.GetActiveScene().buildIndex + "_Win", "Yes");
+        GameUIManager.instance.ShowGameOverScreen(currCoinAmmount, distance, title, true);
     }
 
     public void resetGameData()
     {
         currCoinAmmount = 0;
         distance = 0;
-        HUDManager.instance.UpdateCoinCounter(currCoinAmmount);
-        HUDManager.instance.UpdateDistanceCounter(distance);
+        GameUIManager.instance.UpdateCoinCounter(currCoinAmmount);
+        GameUIManager.instance.UpdateDistanceCounter(distance);
+    }
+
+    public void saveCurrStageData()
+    {
+        string stageKey = "Stage_" + SceneManager.GetActiveScene().buildIndex;
+        int savedCoin = PlayerPrefs.GetInt(stageKey + "_Coin", 0);
+        float savedDistance = PlayerPrefs.GetFloat(stageKey + "_Distance", 0);
+        if (currCoinAmmount > savedCoin)
+        {
+            PlayerPrefs.SetInt(stageKey + "_Coin", currCoinAmmount);
+        }
+        if (distance > savedDistance)
+        {
+            PlayerPrefs.SetFloat(stageKey + "_Distance", distance);
+        }
     }
 }
