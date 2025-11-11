@@ -10,21 +10,50 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            container.SetActive(true);
-            Time.timeScale = 0; // Pause the game
+            // Toggle pause menu
+            if (container.activeSelf)
+            {
+                // Jika pause menu sedang aktif, tutup pause menu
+                ResumeGame();
+            }
+            else
+            {
+                // Jika pause menu tidak aktif, buka pause menu
+                PauseGame();
+            }
         }
     }
 
-    public void ResumeBtn()
+    private void PauseGame()
+    {
+        container.SetActive(true);
+        Time.timeScale = 0; // Pause the game
+    }
+
+    private void ResumeGame()
     {
         container.SetActive(false);
         Time.timeScale = 1; // Resume the game
     }
 
+    public void ResumeBtn()
+    {
+        ResumeGame();
+    }
+
     public void MainMenuBtn(int sceneID)
     {
-        // Load the main menu scene (assuming it's named "MainMenu")
+        // Load the main menu scene
         SceneManager.LoadScene(sceneID);
         Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
+    }
+
+    public void RetryGame()
+    {
+        // Lanjutkan waktu game
+        Time.timeScale = 1f;
+
+        // Muat ulang scene saat ini
+        SceneManager.LoadScene(1);
     }
 }
