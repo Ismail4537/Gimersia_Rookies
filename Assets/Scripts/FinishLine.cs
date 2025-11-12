@@ -12,6 +12,8 @@ public class FinishLine : MonoBehaviour
                 player.setControllable(false);
                 player.StopAllCoroutines();
                 player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+                player.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+                player.transform.rotation = Quaternion.identity;
                 GameManager.instance.triggerWin();
             }
         }

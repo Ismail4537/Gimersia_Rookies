@@ -72,6 +72,11 @@ public class GameUIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
     }
 
+    public bool isGameOverScreenActive()
+    {
+        return gameOverScreen.activeSelf;
+    }
+
     public void RestartBtn()
     {
         gameOverScreen.SetActive(false);
