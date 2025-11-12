@@ -3,6 +3,7 @@ using UnityEngine;
 public class BackgroundController : MonoBehaviour
 {
     private float startPos, length;
+    public Vector2 offset;
     public GameObject cam;
     public float parallaxEffect;
 
@@ -17,7 +18,7 @@ public class BackgroundController : MonoBehaviour
         float distance = cam.transform.position.x * parallaxEffect;
         float movement = cam.transform.position.x * (1 - parallaxEffect);
 
-        transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
+        transform.position = new Vector3(startPos + distance + offset.x, transform.position.y + offset.y, transform.position.z);
 
         // Perbaikan: Cek kondisi reposisi dengan lebih akurat
         if (movement > startPos + (length / 2))
