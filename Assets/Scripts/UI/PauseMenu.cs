@@ -24,11 +24,11 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            Paus();
+            Pause();
         }
     }
 
-    public void Paus()
+    public void Pause()
     {
         container.SetActive(true);
         Time.timeScale = 0; // Pause the game
