@@ -1,12 +1,13 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class paralaxYFollow : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    public Transform target;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // yOffset = transform.position.y;
+
     }
 
     // Update is called once per frame
@@ -16,5 +17,14 @@ public class paralaxYFollow : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, target.position.y);
         }
+        else
+        {
+            Debug.LogWarning("ParallaxYFollow: Target is not assigned.");
+        }
+    }
+
+    public void changeTarget(Transform newTarget)
+    {
+        target = newTarget;
     }
 }

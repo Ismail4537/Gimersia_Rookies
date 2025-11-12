@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2639475258717189011}
+  m_Father: {fileID: 7774692760858130717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &61976274804810005
 SpriteRenderer:
@@ -555,6 +555,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7033445207206405487}
+  - {fileID: 6257355645827512236}
   m_Father: {fileID: 2639475258717189011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1844942361242233255
@@ -651,7 +652,6 @@ Transform:
   m_Children:
   - {fileID: 7648287871911789414}
   - {fileID: 7774692760858130717}
-  - {fileID: 6257355645827512236}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2122600061587802950
@@ -840,6 +840,7 @@ MonoBehaviour:
   board: {fileID: 0}
   CCCam: {fileID: 0}
   gd: {fileID: 287464516300301901}
+  parallax: {fileID: 0}
   isGrounded: 0
   isFell: 0
 --- !u!247 &7139004325467409274

@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] CollideChecker chara, board;
     [SerializeField] CinemachineCamera CCCam;
     [SerializeField] GroundDetector gd;
+    [SerializeField] paralaxYFollow parallax;
     Vector2 startPos;
     public bool isGrounded = false;
     public bool isFell = false;
@@ -108,6 +109,7 @@ public class Player : MonoBehaviour
     public void changeCamTarget(Transform newTarget)
     {
         CCCam.Follow = newTarget;
+        parallax.changeTarget(newTarget);
     }
 
     public Vector2 getVelocity()
