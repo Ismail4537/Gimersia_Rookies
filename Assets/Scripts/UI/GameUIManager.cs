@@ -81,6 +81,7 @@ public class GameUIManager : MonoBehaviour
     {
         gameOverScreen.SetActive(false);
         SceneController.instance.RestartScene();
+        toggleHUD(true);
     }
 
     public void MainMenuBtn()
