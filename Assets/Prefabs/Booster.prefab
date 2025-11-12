@@ -81,8 +81,8 @@ SpriteRenderer:
   m_SortingLayerID: -1952493633
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.010531545, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: -821225137786949134, guid: 35cf53ddd68a198439efd48b13b7e1d4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -140,3 +140,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d585a7db2d469714ab5d5ebcf5959bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Boost
+  amount: 100
