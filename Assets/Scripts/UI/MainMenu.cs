@@ -11,10 +11,11 @@ public class MainMenu : MonoBehaviour
     //public int sceneID = 3;
 
 
-    //private void Start()
-    //{
-    //    StartCoroutine(LoadSceneAsync(sceneID));
-    //}
+    private void Start()
+    {
+        //    StartCoroutine(LoadSceneAsync(sceneID));
+        MusicManager.instance.PlayMusicTrack("MainMenu", 1f);
+    }
 
     //public void LoadScene(int sceneID)
     //{

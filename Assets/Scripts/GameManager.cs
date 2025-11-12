@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
     }
 
     public void UpdateCurrCoinAmmount(int amount)
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         if (GameUIManager.instance.isGameOverScreenActive())
             return;
+        MusicManager.instance.StopMusicTrack(0.8f);
         saveCurrStageData();
         SFXManager.instance.PlayClip2D("GameOver", 1.0f);
         GameUIManager.instance.ShowGameOverScreen(currCoinAmmount, distance);

@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using Unity.Cinemachine;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -26,7 +24,7 @@ public class Player : MonoBehaviour
     float boosterMeterCur = 0f;
     float maxVelocity = 80f;
     float smoothVel;
-    float boostDuration = 5f;
+    float boostDuration = 2f;
     float boostTimer;
     // Awake is called when the script instance is being loaded
     void Awake()
@@ -40,7 +38,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
-        MusicManager.instance.PlayMusicTrack("test", 1f);
+        MusicManager.instance.PlayMusicTrack("InGame", 1f);
         GameUIManager.instance.UpdateBoosterMeter(boosterMeterCur);
     }
 

@@ -46,8 +46,6 @@ public class CharCheck : CollideChecker
         player.changeCamTarget(gameObject.transform);
 
         fullCollider.GetComponent<Rigidbody2D>().linearVelocity = player.getVelocity();
-        gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
-        gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1, 1);
 
         if (fullCollider != null)
         {
