@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: 757ea1e7d7650b44298c8935b46563e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 422874039683669633
+    second: cloud night long_0
+  - first:
+      213: -6862634272213336514
+    second: cloud night long_1
+  - first:
+      213: -8438662431312013679
+    second: cloud night long_2
+  - first:
+      213: -8052221173618440762
+    second: cloud night long_3
+  - first:
+      213: -2708255438753700051
+    second: cloud night long_4
+  - first:
+      213: 6608780100074829999
+    second: cloud night long_5
+  - first:
+      213: -8805067096791786191
+    second: cloud night long_6
+  - first:
+      213: -5426214364643823959
+    second: cloud night long_7
+  - first:
+      213: -7396673963361101197
+    second: cloud night long_8
+  - first:
+      213: 4233876128572523641
+    second: cloud night long_9
+  - first:
+      213: -2537234966774366665
+    second: cloud night long_10
+  - first:
+      213: -7519757545429894951
+    second: cloud night long_11
+  - first:
+      213: 768435642626100791
+    second: cloud night long_12
+  - first:
+      213: -5841163412888215105
+    second: cloud night long_13
+  - first:
+      213: -9213711065458342199
+    second: cloud night long_14
+  - first:
+      213: -2872319051909218268
+    second: cloud night long_15
+  - first:
+      213: -6037600472767513164
+    second: cloud night long_16
+  - first:
+      213: -7806416550081887550
+    second: cloud night long_17
+  - first:
+      213: -2106353934140833602
+    second: cloud night long_18
+  - first:
+      213: 1142278115061168313
+    second: cloud night long_19
+  - first:
+      213: 7661905663016839090
+    second: cloud night long_20
+  - first:
+      213: -953773818622051165
+    second: cloud night long_21
+  - first:
+      213: 4059424968988431159
+    second: cloud night long_22
+  - first:
+      213: 720016052412114519
+    second: cloud night long_23
+  - first:
+      213: 8172672706788685040
+    second: cloud night long_24
+  - first:
+      213: 6095801929486204512
+    second: cloud night long_25
+  - first:
+      213: 1490538145749795975
+    second: cloud night long_26
+  - first:
+      213: 8465439901941762667
+    second: cloud night long_27
+  - first:
+      213: -7647791854472202003
+    second: cloud night long_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cloud night long_0
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 443
+        width: 627
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e5418d2b95ed500800000000000000
+      internalID: 422874039683669633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_1
+      rect:
+        serializedVersion: 2
+        x: 3382
+        y: 354
+        width: 408
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e7d4d3d7603c0a0800000000000000
+      internalID: -6862634272213336514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_2
+      rect:
+        serializedVersion: 2
+        x: 4023
+        y: 341
+        width: 713
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196963a8a39d3ea80800000000000000
+      internalID: -8438662431312013679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_3
+      rect:
+        serializedVersion: 2
+        x: 4197
+        y: 485
+        width: 432
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c5089d4183c04090800000000000000
+      internalID: -8052221173618440762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_4
+      rect:
+        serializedVersion: 2
+        x: 5067
+        y: 341
+        width: 460
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27e01407085a6ad0800000000000000
+      internalID: -2708255438753700051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_5
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 282
+        width: 237
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa871a77c7a17bb50800000000000000
+      internalID: 6608780100074829999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_6
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 348
+        width: 237
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13dde30702e1ec580800000000000000
+      internalID: -8805067096791786191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_7
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 370
+        width: 237
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae6840e8c632b4b0800000000000000
+      internalID: -5426214364643823959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_8
+      rect:
+        serializedVersion: 2
+        x: 3588
+        y: 275
+        width: 398
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a1b76383cb95990800000000000000
+      internalID: -7396673963361101197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 147
+        width: 344
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 974429a28efb1ca30800000000000000
+      internalID: 4233876128572523641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_10
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 205
+        width: 237
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73eb6b59d3ee9ccd0800000000000000
+      internalID: -2537234966774366665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_11
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 165
+        width: 237
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d876939a5474a790800000000000000
+      internalID: -7519757545429894951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_12
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 250
+        width: 237
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e4a7745280aaa00800000000000000
+      internalID: 768435642626100791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_13
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 77
+        width: 554
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb12ac3e2d400fea0800000000000000
+      internalID: -5841163412888215105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_14
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 145
+        width: 460
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c605403a92522080800000000000000
+      internalID: -9213711065458342199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_15
+      rect:
+        serializedVersion: 2
+        x: 4368
+        y: 145
+        width: 460
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4204d5d5a097328d0800000000000000
+      internalID: -2872319051909218268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_16
+      rect:
+        serializedVersion: 2
+        x: 5774
+        y: 241
+        width: 187
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd36fccb52263ca0800000000000000
+      internalID: -6037600472767513164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_17
+      rect:
+        serializedVersion: 2
+        x: 6152
+        y: 178
+        width: 237
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c283a302890aa390800000000000000
+      internalID: -7806416550081887550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_18
+      rect:
+        serializedVersion: 2
+        x: 6677
+        y: 215
+        width: 429
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb00a40c14ab4c2e0800000000000000
+      internalID: -2106353934140833602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_19
+      rect:
+        serializedVersion: 2
+        x: 7040
+        y: 222
+        width: 378
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b87ce2c4ef2adf00800000000000000
+      internalID: 1142278115061168313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_20
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 96
+        width: 161
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b72ca22b9e845a60800000000000000
+      internalID: 7661905663016839090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_21
+      rect:
+        serializedVersion: 2
+        x: 4908
+        y: 7
+        width: 627
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acf6f8e3c383c2f0800000000000000
+      internalID: -953773818622051165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_22
+      rect:
+        serializedVersion: 2
+        x: 5061
+        y: 134
+        width: 380
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73318e46089f55830800000000000000
+      internalID: 4059424968988431159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_23
+      rect:
+        serializedVersion: 2
+        x: 5635
+        y: 145
+        width: 186
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7566a9ce8c20ef900800000000000000
+      internalID: 720016052412114519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_24
+      rect:
+        serializedVersion: 2
+        x: 5977
+        y: 117
+        width: 237
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f47ba1b68a2b6170800000000000000
+      internalID: 8172672706788685040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_25
+      rect:
+        serializedVersion: 2
+        x: 6211
+        y: 145
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e7a24de83a89450800000000000000
+      internalID: 6095801929486204512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_26
+      rect:
+        serializedVersion: 2
+        x: 6268
+        y: 107
+        width: 245
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784069ddb847fa410800000000000000
+      internalID: 1490538145749795975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_27
+      rect:
+        serializedVersion: 2
+        x: 6601
+        y: 50
+        width: 460
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a08ae2db84b7570800000000000000
+      internalID: 8465439901941762667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud night long_28
+      rect:
+        serializedVersion: 2
+        x: 6198
+        y: 76
+        width: 142
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8fe0ef3d59dd590800000000000000
+      internalID: -7647791854472202003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cloud night long_0: 422874039683669633
+      cloud night long_1: -6862634272213336514
+      cloud night long_10: -2537234966774366665
+      cloud night long_11: -7519757545429894951
+      cloud night long_12: 768435642626100791
+      cloud night long_13: -5841163412888215105
+      cloud night long_14: -9213711065458342199
+      cloud night long_15: -2872319051909218268
+      cloud night long_16: -6037600472767513164
+      cloud night long_17: -7806416550081887550
+      cloud night long_18: -2106353934140833602
+      cloud night long_19: 1142278115061168313
+      cloud night long_2: -8438662431312013679
+      cloud night long_20: 7661905663016839090
+      cloud night long_21: -953773818622051165
+      cloud night long_22: 4059424968988431159
+      cloud night long_23: 720016052412114519
+      cloud night long_24: 8172672706788685040
+      cloud night long_25: 6095801929486204512
+      cloud night long_26: 1490538145749795975
+      cloud night long_27: 8465439901941762667
+      cloud night long_28: -7647791854472202003
+      cloud night long_3: -8052221173618440762
+      cloud night long_4: -2708255438753700051
+      cloud night long_5: 6608780100074829999
+      cloud night long_6: -8805067096791786191
+      cloud night long_7: -5426214364643823959
+      cloud night long_8: -7396673963361101197
+      cloud night long_9: 4233876128572523641
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

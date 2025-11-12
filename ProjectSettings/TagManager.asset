@@ -59,6 +59,9 @@ TagManager:
   - name: 6Mountain3
     uniqueID: 2421375791
     locked: 0
+  - name: Foreground
+    uniqueID: 952484383
+    locked: 0
   - name: Player
     uniqueID: 2342473663
     locked: 0
