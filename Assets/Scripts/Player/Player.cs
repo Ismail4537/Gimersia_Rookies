@@ -145,6 +145,7 @@ public class Player : MonoBehaviour
         {
             SFXManager.instance.PlayClip3D("HitSnow", transform.position, 1f);
             cf.relativeForce = new Vector2(0f, 0f);
+            isGrounded = false;
             wasGrounded = true;
             float playerRotation = transform.eulerAngles.z;
             Vector2 jumpDir = new Vector2(-Mathf.Sin(playerRotation * Mathf.Deg2Rad), Mathf.Cos(playerRotation * Mathf.Deg2Rad));
@@ -175,7 +176,7 @@ public class Player : MonoBehaviour
     {
         if (boosterMeterCur == 100f && isGrounded)
         {
-            SFXManager.instance.PlayClip2D("Boosting", 0.5f);
+            SFXManager.instance.PlayClip2D("Boosting", 0.25f);
             StartCoroutine(boostCountdown());
             updateBooster(0);
         }
