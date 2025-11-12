@@ -24,17 +24,27 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            Paus();
+            // Toggle pause menu
+            if (container.activeSelf)
+            {
+                // Jika pause menu sedang aktif, tutup pause menu
+                ResumeGame();
+            }
+            else
+            {
+                // Jika pause menu tidak aktif, buka pause menu
+                Pause();
+            }
         }
     }
 
-    public void Paus()
+    public void Pause()
     {
         container.SetActive(true);
         Time.timeScale = 0; // Pause the game
     }
 
-    public void ResumeBtn()
+    public void ResumeGame()
     {
         container.SetActive(false);
         Time.timeScale = 1; // Resume the game
@@ -45,5 +55,12 @@ public class PauseMenuController : MonoBehaviour
         // Load the main menu scene (assuming it's named "MainMenu")
         SceneController.instance.ToMainMenu();
         Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
+    }
+
+    public void RestartGame()
+    {
+        container.SetActive(false);
+        Time.timeScale = 1; // Ensure time scale is reset when restarting the game
+        SceneController.instance.RestartScene();
     }
 }

@@ -6,15 +6,16 @@ using System.Collections;
 public class MainMenu : MonoBehaviour
 {
 
-    //public GameObject loadingScreen;
+    public GameObject container;
 
     //public int sceneID = 3;
 
 
-    //private void Start()
-    //{
-    //    StartCoroutine(LoadSceneAsync(sceneID));
-    //}
+    private void Start()
+    {
+        //    StartCoroutine(LoadSceneAsync(sceneID));
+        MusicManager.instance.PlayMusicTrack("MainMenu", 1f);
+    }
 
     //public void LoadScene(int sceneID)
     //{
@@ -24,6 +25,18 @@ public class MainMenu : MonoBehaviour
     public void LoadScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
+        Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
+    }
+
+    public void settingCreditBtn()
+    {
+        container.SetActive(true);
+        Time.timeScale = 0; // Ensure time scale is reset when loading a new scene
+    }
+
+    public void closebtn()
+    {
+        container.SetActive(false);
         Time.timeScale = 1; // Ensure time scale is reset when loading a new scene
     }
 

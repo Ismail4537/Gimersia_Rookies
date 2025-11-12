@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
     }
 
     public void UpdateCurrCoinAmmount(int amount)
@@ -31,14 +32,20 @@ public class GameManager : MonoBehaviour
 
     public void triggerGameOver()
     {
+        if (GameUIManager.instance.isGameOverScreenActive())
+            return;
+        MusicManager.instance.StopMusicTrack(0.8f);
         saveCurrStageData();
         SFXManager.instance.PlayClip2D("GameOver", 1.0f);
         GameUIManager.instance.ShowGameOverScreen(currCoinAmmount, distance);
     }
 
-    public void triggerWin(string title = "You Win!")
+    public void triggerWin(string title = "Score")
     {
+        if (GameUIManager.instance.isGameOverScreenActive())
+            return;
         saveCurrStageData();
+        SFXManager.instance.PlayClip2D("GetBooster", 1.0f);
         PlayerPrefs.SetString("Stage_" + SceneManager.GetActiveScene().buildIndex + "_Win", "Yes");
         GameUIManager.instance.ShowGameOverScreen(currCoinAmmount, distance, title, true);
     }

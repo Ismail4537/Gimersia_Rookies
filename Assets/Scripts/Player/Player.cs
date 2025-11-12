@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using Unity.Cinemachine;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -12,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] CollideChecker chara, board;
     [SerializeField] CinemachineCamera CCCam;
     [SerializeField] GroundDetector gd;
+    [SerializeField] paralaxYFollow parallax;
     Vector2 startPos;
     public bool isGrounded = false;
     public bool isFell = false;
@@ -25,7 +24,7 @@ public class Player : MonoBehaviour
     float boosterMeterCur = 0f;
     float maxVelocity = 80f;
     float smoothVel;
-    float boostDuration = 5f;
+    float boostDuration = 2f;
     float boostTimer;
     // Awake is called when the script instance is being loaded
     void Awake()
@@ -39,7 +38,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
-        MusicManager.instance.PlayMusicTrack("test", 1f);
+        MusicManager.instance.PlayMusicTrack("InGame", 1f);
         GameUIManager.instance.UpdateBoosterMeter(boosterMeterCur);
     }
 
@@ -108,6 +107,7 @@ public class Player : MonoBehaviour
     public void changeCamTarget(Transform newTarget)
     {
         CCCam.Follow = newTarget;
+        parallax.changeTarget(newTarget);
     }
 
     public Vector2 getVelocity()
@@ -145,6 +145,7 @@ public class Player : MonoBehaviour
         {
             SFXManager.instance.PlayClip3D("HitSnow", transform.position, 1f);
             cf.relativeForce = new Vector2(0f, 0f);
+            isGrounded = false;
             wasGrounded = true;
             float playerRotation = transform.eulerAngles.z;
             Vector2 jumpDir = new Vector2(-Mathf.Sin(playerRotation * Mathf.Deg2Rad), Mathf.Cos(playerRotation * Mathf.Deg2Rad));
@@ -175,7 +176,7 @@ public class Player : MonoBehaviour
     {
         if (boosterMeterCur == 100f && isGrounded)
         {
-            SFXManager.instance.PlayClip2D("Boosting", 0.5f);
+            SFXManager.instance.PlayClip2D("Boosting", 0.25f);
             StartCoroutine(boostCountdown());
             updateBooster(0);
         }

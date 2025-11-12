@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Terrain
   - PickAble
-  - 
+  - Obstacle
   - 
   - 
   - 
@@ -44,17 +44,26 @@ TagManager:
   - name: 1Sky
     uniqueID: 940099805
     locked: 0
+  - name: 3Sun
+    uniqueID: 955782523
+    locked: 0
   - name: 2Cloud
     uniqueID: 4066431791
     locked: 0
-  - name: 3Background
-    uniqueID: 955782523
+  - name: 4Mountain
+    uniqueID: 2362288001
+    locked: 0
+  - name: 5Mountain2
+    uniqueID: 1091858537
+    locked: 0
+  - name: 6Mountain3
+    uniqueID: 2421375791
+    locked: 0
+  - name: Foreground
+    uniqueID: 952484383
     locked: 0
   - name: Player
     uniqueID: 2342473663
-    locked: 0
-  - name: 4Foreground
-    uniqueID: 2362288001
     locked: 0
   m_RenderingLayers:
   - Default
